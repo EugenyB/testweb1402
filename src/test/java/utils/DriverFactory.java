@@ -24,6 +24,7 @@ public class DriverFactory {
                 break;
             default: //add default browser here
         }
+        driver.navigate().to("http://localhost:8080");
         driver.manage().window().maximize();
         return driver;
     }

@@ -1,17 +1,18 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-    @FindBy(id = "login")
+    @FindBy(xpath = "//*[@id='login']")
     WebElement loginField;
 
-    @FindBy(id = "passw")
+    @FindBy(xpath = "//*[@id='passw']")
     WebElement passwordField;
 
-    @FindBy(id = "okbutton")
+    @FindBy(xpath = "//*[@id='okbutton']")
     WebElement button;
 
     public void fillLoginField(String text) {

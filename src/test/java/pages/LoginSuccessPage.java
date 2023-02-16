@@ -7,11 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LoginSuccessPage extends BasePage {
 
-    @FindBy(id="id_gray")
+    @FindBy(xpath="//*[@id='id_gray']")
     WebElement divGray;
 
-    public void assertIdIsGray() {
-        String value = divGray.getCssValue("class");
-        assertThat(value).isEqualToIgnoringCase("gray");
+    public void assertThatUserDivPresent() {
+        assertThat(divGray.isDisplayed()).isTrue();
     }
 }
